@@ -2,6 +2,8 @@
 
 This repository contains Python-based analysis and modeling of stormwater Best Management Practices (BMPs).
 
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
 Stormwater BMPs are systems designed to manage runoff by storing, slowing, infiltrating, or releasing water during and after rainfall events. This project uses monitored rainfall, water-level, inflow, and outflow data to investigate how different BMPs respond to storm events.
 
 ## Objectives
