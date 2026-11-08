@@ -1,85 +1,34 @@
 # Stormwater BMP Modeling
 
-This repository contains Python-based analysis and modeling of stormwater Best Management Practices (BMPs).
+An ongoing project investigating the hydrologic performance of **stormwater Best Management Practices (BMPs)** using field monitoring data and Python-based modeling.
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-Stormwater BMPs are systems designed to manage runoff by storing, slowing, infiltrating, or releasing water during and after rainfall events. This project uses monitored rainfall, water-level, inflow, and outflow data to investigate how different BMPs respond to storm events.
+## Overview
 
-## Objectives
+This project analyzes how stormwater BMPs respond to rainfall events through changes in inflow, storage, and outflow.
 
-The main goals of this repository are to:
+The goal is to use observed monitoring data to develop, calibrate, and evaluate hydrologic models representing BMP performance.
 
-- clean and organize field monitoring data,
-- identify and analyze individual storm events,
-- compare rainfall, inflow, storage, and outflow behavior,
-- perform event-scale water-balance checks,
-- develop and test different hydrologic modeling approaches,
-- calibrate model parameters using observed data,
-- compare modeled and measured hydrographs,
-- evaluate the strengths and limitations of different modeling methods.
+## Data and Methods
 
-## Data
+Depending on the monitoring site, datasets may include rainfall, inflow and outflow discharge, water levels, and drainage area information.
 
-Depending on the monitoring site, available data may include:
+The workflow includes:
 
-- rainfall depth and intensity,
-- inflow discharge,
-- outlet discharge,
-- water level,
-- sensor timestamps,
-- contributing drainage area.
+1. Processing and synchronizing monitoring data.
+2. Identifying and analyzing individual storm events.
+3. Evaluating water balances and observed hydrographs.
+4. Developing and calibrating hydrologic models.
+5. Comparing simulated and observed responses.
 
-The monitoring records are processed and synchronized onto common time intervals before analysis and modeling.
-
-## Modeling
-
-Different BMP sites may require different modeling approaches depending on the available data and the physical behavior of the system.
-
-Models explored in this repository may range from simple conceptual storage models to more detailed hydrologic or hydraulic approaches.
-
-The purpose is not necessarily to reproduce every physical component of a BMP individually, but to determine which modeling approaches can reasonably represent observed system behavior.
-
-## Event Analysis
-
-Before fitting a model, observed data are examined using basic hydrologic checks.
-
-For example, rainfall volume over a contributing drainage area can be estimated as
-
-$$
-V_{\mathrm{rain}} = P A
-$$
-
-where:
-
-- $V_{\mathrm{rain}}$ is rainfall volume,
-- $P$ is total rainfall depth,
-- $A$ is the contributing drainage area.
-
-Observed discharge volume can be estimated numerically from the measured hydrograph:
-
-$$
-V_{\mathrm{out}}
-\approx
-\sum Q_i \Delta t
-$$
-
-These checks help identify possible issues with drainage-area assumptions, sensor measurements, event selection, or model inputs before calibration.
-
-Each BMP site can have its own notebook and documentation describing the available data, preprocessing steps, modeling approach, and results.
+Modeling approaches range from simple conceptual storage models to more detailed representations, depending on site characteristics and data availability.
 
 ## Tools
 
-The analysis primarily uses:
-
-- Python
-- pandas
-- NumPy
-- Matplotlib
+- Python (pandas, NumPy, Matplotlib)
 - Jupyter Notebook / Google Colab
-
-Additional modeling tools may be incorporated as the project develops.
 
 ## Status
 
-This is an ongoing project exploring different approaches for modeling monitored stormwater BMPs. Methods and site analyses will be expanded as additional data and modeling approaches are evaluated.
+This project is ongoing. Additional BMP sites and modeling approaches will be incorporated as data become available.
